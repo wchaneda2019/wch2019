@@ -1,0 +1,25 @@
+body{
+  font-family: $sans;
+}
+
+#page {
+  overflow: hidden;
+}
+
+.screen-reader-text{
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+%text-indent-far{
+  text-indent: -9999px;
+}
+
+.content-box {
+  max-width: $content-width;
+  padding-right: $content-gap;
+  padding-left: $content-gap;
+}
