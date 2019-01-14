@@ -58,7 +58,7 @@ var nodeSassConf = {
 /* BrowserSync
 /*----------------------------------------------------------------------------*/
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function(callback) {
   var paths = filePaths();
   var args = {};
   if (argv.mode == 'server' ) {
@@ -69,10 +69,12 @@ gulp.task('browser-sync', function() {
     args.open = 'external';
   };
   browserSync.init(args);
+  callback();
 })
 
-gulp.task('bs-reload', function() {
-  browserSync.reload()
+gulp.task('bs-reload', function(callback) {
+  browserSync.reload();
+  callback();
 });
 
 /*----------------------------------------------------------------------------*/
@@ -83,7 +85,7 @@ gulp.task('image-min', function() {
   var paths = filePaths();
   return gulp.src( paths.imagePath + '**/*')
     .pipe($.imagemin({ optimizationLevel: 3 }))
-    .pipe(gulp.dest(paths.imageDest));
+	.pipe(gulp.dest(paths.imageDest));
 });
 
 
@@ -94,7 +96,7 @@ gulp.task('image-min', function() {
 gulp.task('copyFont', function() {
   var paths = filePaths();
   return gulp.src( './node_modules/font-awesome/fonts/*' )
-    .pipe(gulp.dest(paths.fontPath));
+	.pipe(gulp.dest(paths.fontPath));
 });
 
 
@@ -122,7 +124,7 @@ gulp.task('pug', function() {
       errorHandler: $.notify.onError('<%= error.message %>')
     }))
     .pipe($.pug({ pretty: true }))
-    .pipe(gulp.dest(dest));
+		.pipe(gulp.dest(dest));
 });
 
 /*----------------------------------------------------------------------------*/
@@ -154,29 +156,33 @@ gulp.task('sass', function () {
 /* gulp tasks
 /*----------------------------------------------------------------------------*/
 
-gulp.task('deploy', function() {
-  deployFlg = true;
-  runSequence( 'pug', 'sass', 'image-min', 'copyFont', function() {
-    deployFlg = false;
-    console.log( 'Deploy Done. Push them to origin/master!' );
-  });
+gulp.task('deploy-flag', function(callback) {
+	deployFlg = true;
+	callback();
 });
 
-gulp.task('watch', function() {
+gulp.task('deploy', gulp.series(gulp.parallel('deploy-flag','pug', 'sass', 'image-min', 'copyFont'), function(callback) {
+  deployFlg = false;
+  console.log( 'Deploy Done. Push them to origin/master!' );
+	callback();
+}));
+
+gulp.task('watch', function(callback) {
   deployFlg = false;
   var paths = filePaths();
   // gulp.watch([paths.htmlDest  + '**/*'], ['bs-reload']);
-  gulp.watch([paths.htmlPath  + '**/*.pug'], ['pug']);
-  gulp.watch([paths.scssPath  + '**/*.scss'], ['sass']);
-  gulp.watch([paths.imagePath + '**/*'], ['image-min']);
+  gulp.watch([paths.htmlPath  + '**/*.pug'], gulp.task('pug'));
+  gulp.watch([paths.scssPath  + '**/*.scss'], gulp.task('sass'));
+	gulp.watch([paths.imagePath + '**/*'], gulp.task('image-min'));
+	callback();
 });
 
-gulp.task('server', ['browser-sync', 'watch']);
+gulp.task('server', gulp.series(['browser-sync', 'watch']));
 
-gulp.task('default', [
+gulp.task('default', gulp.series([
   'image-min',
   'pug',
   'sass',
   'copyFont',
   'watch'
-]);
+]));
