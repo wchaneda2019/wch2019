@@ -14,7 +14,7 @@
 .main-navigation{
   position: absolute;
   top: $header-gap;
-  right: $content-gap;
+  left: $content-gap;
 }
 
 //
@@ -133,7 +133,7 @@
       }
       & > li:last-of-type {
         .sub-menu {
-          right: 0;
+          left: 0;
           left: auto;
           z-index: 2;
         }
@@ -213,7 +213,7 @@
       top: $header-height;
     }
     z-index: 99;
-    right: 0;
+    left: 0;
     width: 300px;
     width: 90vw;
     background: $color-black;
@@ -225,7 +225,7 @@
       height: 0;
       width: 0;
       position: absolute;
-      right: $navigation-height / 2 - $navigation-ticker-width / 2 ;
+      left: $navigation-height / 2 - $navigation-ticker-width / 2 ;
       top: $navigation-ticker-width * -2;
       border: $navigation-ticker-width solid transparent;
       border-right-width: 5px;
