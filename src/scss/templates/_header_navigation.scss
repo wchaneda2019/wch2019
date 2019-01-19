@@ -67,10 +67,6 @@
       border-bottom: none;
     }
 
-    &-title {
-      display:none;
-    }
-
   }
   &-branding{
     body.home &{
@@ -81,21 +77,7 @@
     left: 0;
   }
   &-title{
-    margin: 0;
-    padding: 0;
-    background: $color-black90;
-    a{
-      display: block;
-      width: $header-brand-width;
-      height: $header-height;
-      background: url("#{$img-path}header-brand.png") left top no-repeat;
-      background-size: cover;
-      overflow: hidden;
-      @extend %text-indent-far;
-      &:hover{
-        opacity: .8;
-      }
-    }
+    display: none;
   }
   &-description{
     @extend .screen-reader-text;
