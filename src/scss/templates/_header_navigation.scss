@@ -67,6 +67,10 @@
       border-bottom: none;
     }
 
+    &-title {
+      display:none;
+    }
+
   }
   &-branding{
     body.home &{
