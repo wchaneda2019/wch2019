@@ -23,7 +23,7 @@
   &-previous {
     padding-bottom: 24px;
     &::before {
-      color: $color-red;
+      color: $color-blue;
       content: "\f060";
       font-family: FontAwesome;
       display: inline-block;
@@ -35,7 +35,7 @@
     text-align: right;
     justify-content: flex-end;
     &::after {
-      color: $color-red;
+      color: $color-blue;
       content: "\f061";
       font-family: FontAwesome;
       display: inline-block;

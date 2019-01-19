@@ -27,7 +27,7 @@ article.hentry, article.error404 {
       height: 0;
       border-style: solid;
       border-width: 16px 14px 0 14px;
-      border-color: #c10000 transparent transparent transparent;
+      border-color: $color-blue transparent transparent transparent;
     }
     @include mq-only-small(){
       padding-top: 24px;

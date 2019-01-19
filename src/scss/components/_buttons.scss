@@ -4,7 +4,7 @@
   box-sizing: content-box;
   line-height: $navigation-height - 4;
   border: 2px solid $color-white;
-  background-color: $color-red;
+  background-color: $color-blue;
   color: #fff !important;
   font-size: 14px;
   padding: 0 2em;
@@ -16,7 +16,7 @@
   }
   &:hover, &:active{
     color: $color-white;
-    background: $color-red-secondary;
+    background: $color-blue-secondary;
     text-decoration: none;
     border: 2px solid $color-white !important;
   }
