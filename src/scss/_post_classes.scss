@@ -75,3 +75,7 @@ img {
   width: auto;
   height: auto;
 }
+
+.updated:not(.published) {
+  display: none;
+}
