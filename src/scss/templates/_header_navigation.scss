@@ -4,17 +4,17 @@
 // Container
 //
 .site-header{
-  background: $color-black90 url("#{$img-path}pattern_2x.png") top left repeat;
-  background-size: 74px;
 }
 
 //
 //
 //
 .main-navigation{
+  /*
   position: absolute;
   top: $header-gap;
   left: $content-gap;
+  */
 }
 
 //
@@ -59,12 +59,16 @@
 //
 .site{
   &-header{
-    height: $header-height;
+    /* height: $header-height; */
     border-bottom: $header-border;
     position: relative;
     box-sizing: content-box;
+
+    z-index: 9999;
+
     body.home &{
       border-bottom: none;
+      box-shadow: 0 3px 3px rgba(0,0,0,.26);
     }
 
   }
@@ -108,7 +112,7 @@
           &:link, &:visited{
             color: $color-black;
             text-decoration: none;
-            background: rgba( 255, 255, 255, .8 );
+            background: rgba( 255, 255, 255, 1 );
           }
           &:hover, &:active{
             color: $color-white;

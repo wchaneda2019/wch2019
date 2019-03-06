@@ -37,7 +37,7 @@ $mv-logo-width-min: 210px;
     padding: 0;
     @include mq-only-small(){
       position: relative;
-      padding: 0 0 33px;
+      padding: 0;
       z-index: 20;
     }
   }
@@ -95,26 +95,29 @@ $mv-logo-width-min: 210px;
     padding: 16px;
     border: 1px solid #000000;
 
+    .widget-title {
+      font-weight: 600;
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin: 0 0 10px 0;
+    }
+
     ul {
       max-width: 600px;
       margin: 0 auto;;
     }
 
     li {
-      /* padding: 0 0 0 10px; */
-      /* text-align: center; */
+      display: flex;
+      flex-direction: row-reverse;
+
+      a {
+        flex: 300 1 auto;
+      }
+
+      .post-date {
+        flex: 1 0 124px;
+      }
     }
-  }
-  .widget-title {
-    font-weight: 600;
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin: 0 0 10px 0;
-  }
-
-
-  .post-date {
-    float: left;
-    padding: 0 10px 0 0;
   }
 }
