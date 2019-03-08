@@ -3,6 +3,7 @@ $mv-logo-height: 297px;
 $mv-logo-width-min: 210px;
 
 // Main visual
+/*
 #content-widget-1{
   border-bottom: $header-border;
   background-color: $color-black90;
@@ -62,6 +63,31 @@ $mv-logo-width-min: 210px;
     }
   }
 }
+*/
+
+.site-branding {
+	padding: 1em 0;
+	position: relative;
+	-webkit-transition: margin-bottom 0.2s;
+	transition: margin-bottom 0.2s;
+}
+
+.site-branding a {
+	text-decoration: none;
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+
+.site-branding a:hover,
+.site-branding a:focus {
+	opacity: 0.7;
+}
+
+#content-widget-1{
+  max-width: 600px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
 
 // Top message
 #content-widget-2{
@@ -71,7 +97,7 @@ $mv-logo-width-min: 210px;
   .widget_text{
     text-align: left;
     padding: 16px;
-    border: 1px solid #000000;
+    border: 1px solid #6d6d6d;
   }
   .widget-title {
     font-weight: 600;
@@ -93,7 +119,7 @@ $mv-logo-width-min: 210px;
   .widget_recent_entries{
     text-align: left;
     padding: 16px;
-    border: 1px solid #000000;
+    border: 1px solid #6d6d6d;
 
     .widget-title {
       font-weight: 600;
@@ -118,6 +144,249 @@ $mv-logo-width-min: 210px;
       .post-date {
         flex: 1 0 124px;
       }
+    }
+  }
+}
+
+/*
+body:not(.home) #header-widget-1 .custom-header-media {
+  display: none;
+}
+*/
+
+#header-widget-1 {
+
+  .custom-header {
+    position: relative;
+  }
+
+  .custom-header {
+    display: table;
+    /*
+    height: 300px;
+    height: 75vh;
+    */
+    height: 75vh;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+      height: auto;
+    }
+  }
+
+  .custom-header-media {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      height: 165px;
+      position: relative;
+      height: 1200px;
+      height: 100vh;
+      max-height: 100%;
+      overflow: hidden;
+    }
+
+
+  }
+
+  .custom-header-media:before {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+75 */
+    background: -moz-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#4d000000", GradientType=0); /* IE6-9 */
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+
+    @media screen and (min-width: 768px) {
+      height: 33%;
+    }
+
+  }
+
+  .custom-header-media img {
+    position: fixed;
+    height: auto;
+    left: 50%;
+    max-width: 1000%;
+    min-height: 100%;
+    min-width: 100%;
+    min-width: 100vw; /* vw prevents 1px gap on left that 100% has */
+    width: auto;
+    top: 50%;
+    padding-bottom: 1px; /* Prevent header from extending beyond the footer */
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .site-branding {
+    display: block;
+    position: absolute;
+    height: auto !important;
+    top: 0;
+    left: 3%;
+    width: 100%;
+
+    @media screen and (min-width: 544px) {
+
+
+    }
+
+    @media screen and (min-width: 768px) {
+      top: 20px;
+      left: 3%;
+    }
+
+    @media screen and (min-width: 992px) {
+      left: 5%;
+    }
+
+    @media screen and (min-width: 1200px) {
+      left: 10%;
+    }
+
+    .site-title {
+      > a {
+        display: block;
+        background-image: url($image-path + header-logo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 180px;
+        height: 167px;
+        text-indent: -9999px;
+        max-width: 100%;
+        position: relative;
+        z-index: 100;
+
+        @media screen and (min-width: 544px) {
+          width: 300px;
+          height: 276px;
+        }
+
+        @media screen and (min-width: 768px) {
+          width: 400px;
+          height: 371px;
+        }
+
+        @media screen and (min-width: 992px) {
+          width: 430px;
+          height: 399px;
+        }
+
+        @media screen and (min-width: 1200px) {
+          width: 450px;
+          height: 418px;
+        }
+
+      }
+    }
+
+    .site-description {
+      display: none;
+    }
+
+  }
+
+
+  .site-wapuu {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 3%;
+
+    @media screen and (min-width: 544px) {
+
+
+    }
+
+    @media screen and (min-width: 768px) {
+      right: 3%;
+      bottom: 20px;
+    }
+
+    @media screen and (min-width: 992px) {
+      right: 5%;
+    }
+
+    @media screen and (min-width: 1200px) {
+      right: 5%;
+    }
+
+    & > a {
+      display: block;
+      position: relative;
+      z-index: 100;
+      width: 270px;
+      height: auto;
+      -webkit-transition: 0.2s ease-in-out;
+      transition: 0.2s ease-in-out;
+
+      &:hover, &:active{
+        transform: scale(1.05);
+      }
+
+      @media screen and (min-width: 544px) {
+        width: 370px;
+      }
+
+      @media screen and (min-width: 768px) {
+        width: 470px;
+      }
+
+      @media screen and (min-width: 992px) {
+        width: 500px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: 540px;
+      }
+
+    }
+
+    .wapuu {
+      animation: img-site-wapuu 3s infinite linear;
+      transform-origin: 50% 50%;
+    }
+
+  }
+}
+
+@keyframes img-site-wapuu {
+  0% { transform: translateY(0) }
+  33.33333% { transform: translateY(-10px) }
+  66.66667% { transform: translateY(-5px) }
+  100% { transform: translateY(0) }
+}
+
+/* For browsers that support 'object-fit' */
+@supports ( object-fit: cover ) {
+  #header-widget-1 {
+    .custom-header-media img {
+      height: 100%;
+      left: 0;
+      -o-object-fit: cover;
+      object-fit: cover;
+      top: 0;
+      -ms-transform: none;
+      -moz-transform: none;
+      -webkit-transform: none;
+      transform: none;
+      width: 100%;
     }
   }
 }

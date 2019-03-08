@@ -8,7 +8,7 @@ $env: 'development' !default;
 //
 $img-path: "../images/" !default;
 @if($env == 'production') {
-  $img-path: "//wct2018.github.io/wct2018/assets/images/";
+  $img-path: "//raw.githubusercontent.com/wchaneda2019/wch2019/master/docs/assets/images/";
 }
 
 
