@@ -199,24 +199,38 @@ body:not(.home) #header-widget-1 .custom-header-media {
       }
     }
 
-  }
+    img {
+      position: fixed;
+      height: auto;
+      left: 50%;
+      max-width: 1000%;
+      min-height: 100%;
+      min-height: 100vh;
+      min-width: 100%;
+      min-width: 100vw; /* vw prevents 1px gap on left that 100% has */
+      width: auto;
+      top: 50%;
+      padding-bottom: 1px; /* Prevent header from extending beyond the footer */
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
 
-  .custom-header-media img {
-    position: fixed;
-    height: auto;
-    left: 50%;
-    max-width: 1000%;
-    min-height: 100%;
-    min-height: 100vh;
-    min-width: 100%;
-    min-width: 100vw; /* vw prevents 1px gap on left that 100% has */
-    width: auto;
-    top: 50%;
-    padding-bottom: 1px; /* Prevent header from extending beyond the footer */
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+      @supports ( object-fit: cover ) {
+            height: 100%;
+            left: 0;
+            -o-object-fit: cover;
+            object-fit: cover;
+            /* top: 0; */
+            top: 44px;
+            -ms-transform: none;
+            -moz-transform: none;
+            -webkit-transform: none;
+            transform: none;
+            width: 100%;
+      }
+
+    }
   }
 
   .site-branding {
@@ -247,7 +261,7 @@ body:not(.home) #header-widget-1 .custom-header-media {
     display: block;
     position: absolute;
     height: auto !important;
-    top: 0;
+    top: 44px;
     left: 3%;
     width: 100%;
 
@@ -257,7 +271,7 @@ body:not(.home) #header-widget-1 .custom-header-media {
     }
 
     @media screen and (min-width: 768px) {
-      top: 10px;
+      top: 54px;
       left: 3%;
     }
 
@@ -383,6 +397,7 @@ body:not(.home) #header-widget-1 .custom-header-media {
 }
 
 /* For browsers that support 'object-fit' */
+/*
 @supports ( object-fit: cover ) {
   #header-widget-1 {
     .custom-header-media img {
@@ -399,3 +414,4 @@ body:not(.home) #header-widget-1 .custom-header-media {
     }
   }
 }
+*/
