@@ -8,7 +8,7 @@
     "start": "gulp default",
     "gulp": "gulp",
     "server": "gulp server --mode server",
-    "production": "gulp deploy",
+    "production": "gulp deploy --production",
     "watch": "gulp watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

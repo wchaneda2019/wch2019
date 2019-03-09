@@ -162,7 +162,8 @@ gulp.task('deploy-flag', function(callback) {
 });
 
 gulp.task('deploy', gulp.series(gulp.parallel('deploy-flag','pug', 'sass', 'image-min', 'copyFont'), function(callback) {
-  deployFlg = false;
+	deployFlg = false;
+
   console.log( 'Deploy Done. Push them to origin/master!' );
 	callback();
 }));

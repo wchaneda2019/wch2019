@@ -263,7 +263,7 @@ body:not(.home) #header-widget-1 .custom-header-media {
     .site-title {
       > a {
         display: block;
-        background-image: url($image-path + header-logo.png);
+        background-image: url("#{$img-path}header-logo.png");
         background-size: contain;
         background-repeat: no-repeat;
         width: 180px;
