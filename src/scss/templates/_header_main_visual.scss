@@ -65,22 +65,8 @@ $mv-logo-width-min: 210px;
 }
 */
 
-.site-branding {
-	padding: 1em 0;
-	position: relative;
-	-webkit-transition: margin-bottom 0.2s;
-	transition: margin-bottom 0.2s;
-}
-
-.site-branding a {
-	text-decoration: none;
-	-webkit-transition: opacity 0.2s;
-	transition: opacity 0.2s;
-}
-
-.site-branding a:hover,
-.site-branding a:focus {
-	opacity: 0.7;
+.site-header > .custom-header {
+  display: none;
 }
 
 #content-widget-1{
@@ -162,10 +148,7 @@ body:not(.home) #header-widget-1 .custom-header-media {
 
   .custom-header {
     display: table;
-    /*
     height: 300px;
-    height: 75vh;
-    */
     height: 75vh;
     width: 100%;
 
@@ -187,32 +170,33 @@ body:not(.home) #header-widget-1 .custom-header-media {
     @media screen and (min-width: 768px) {
       height: 165px;
       position: relative;
+      height: 0;
+      position: relative;
+
       height: 1200px;
       height: 100vh;
       max-height: 100%;
       overflow: hidden;
     }
 
+    &:before {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+75 */
+      background: -moz-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#4d000000", GradientType=0); /* IE6-9 */
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: 2;
 
-  }
-
-  .custom-header-media:before {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+75 */
-    background: -moz-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#4d000000", GradientType=0); /* IE6-9 */
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    z-index: 2;
-
-    @media screen and (min-width: 768px) {
-      height: 33%;
+      @media screen and (min-width: 768px) {
+        height: 33%;
+      }
     }
 
   }
@@ -223,6 +207,7 @@ body:not(.home) #header-widget-1 .custom-header-media {
     left: 50%;
     max-width: 1000%;
     min-height: 100%;
+    min-height: 100vh;
     min-width: 100%;
     min-width: 100vw; /* vw prevents 1px gap on left that 100% has */
     width: auto;
@@ -232,6 +217,30 @@ body:not(.home) #header-widget-1 .custom-header-media {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
+  }
+
+  .site-branding {
+    display: table-cell;
+    height: 100%;
+    vertical-align: bottom;
+  }
+
+  .site-branding {
+    padding: 1em 0;
+    position: relative;
+    -webkit-transition: margin-bottom 0.2s;
+    transition: margin-bottom 0.2s;
+  }
+
+  .site-branding a {
+    text-decoration: none;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+  }
+
+  .site-branding a:hover,
+  .site-branding a:focus {
+    opacity: 0.7;
   }
 
   .site-branding {
@@ -248,7 +257,7 @@ body:not(.home) #header-widget-1 .custom-header-media {
     }
 
     @media screen and (min-width: 768px) {
-      top: 20px;
+      top: 10px;
       left: 3%;
     }
 
