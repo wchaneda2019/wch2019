@@ -111,7 +111,7 @@
 
       & > .current-menu-item {
         & > a {
-          background: linear-gradient(transparent 94%, $color-blue 94%) !important;
+          background: linear-gradient(transparent 93%, $color-blue 93%) !important;
           &:hover, &:active{
             color: $color-white;
             background: $navigation-link-bg !important;
@@ -172,7 +172,7 @@
         background: transparent;
         border: none;
         &:after{
-          font-size: 8px;
+          font-size: 10px;
           line-height: 1;
           vertical-align: middle;
           content: "\f078";
