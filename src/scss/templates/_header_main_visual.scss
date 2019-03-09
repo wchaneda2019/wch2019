@@ -87,7 +87,7 @@ $mv-logo-width-min: 210px;
   }
   .widget-title {
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 20px;
     line-height: 1.6;
     margin: 0 0 10px 0;
   }
@@ -109,7 +109,7 @@ $mv-logo-width-min: 210px;
 
     .widget-title {
       font-weight: 600;
-      font-size: 1.1em;
+      font-size: 20px;
       line-height: 1.6;
       margin: 0 0 10px 0;
     }
@@ -147,6 +147,7 @@ body:not(.home) #header-widget-1 .custom-header-media {
   }
 
   .custom-header {
+    margin: 0 !important;
     display: table;
     height: 300px;
     height: 75vh;
@@ -156,82 +157,85 @@ body:not(.home) #header-widget-1 .custom-header-media {
       display: block;
       height: auto;
     }
-  }
 
-  .custom-header-media {
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-
-    @media screen and (min-width: 768px) {
-      height: 165px;
-      position: relative;
-      height: 0;
-      position: relative;
-
-      height: 1200px;
-      height: 100vh;
-      max-height: 100%;
-      overflow: hidden;
-    }
-
-    &:before {
-      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+75 */
-      background: -moz-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%); /* FF3.6-15 */
-      background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#4d000000", GradientType=0); /* IE6-9 */
+    .custom-header-media {
       bottom: 0;
-      content: "";
-      display: block;
-      height: 100%;
       left: 0;
+      overflow: hidden;
       position: absolute;
       right: 0;
-      z-index: 2;
+      top: 0;
+      width: 100%;
 
       @media screen and (min-width: 768px) {
-        height: 33%;
-      }
-    }
+        height: 165px;
+        position: relative;
+        height: 0;
+        position: relative;
 
-    img {
-      position: fixed;
-      height: auto;
-      left: 50%;
-      max-width: 1000%;
-      min-height: 100%;
-      min-height: 100vh;
-      min-width: 100%;
-      min-width: 100vw; /* vw prevents 1px gap on left that 100% has */
-      width: auto;
-      top: 50%;
-      padding-bottom: 1px; /* Prevent header from extending beyond the footer */
-      -ms-transform: translateX(-50%) translateY(-50%);
-      -moz-transform: translateX(-50%) translateY(-50%);
-      -webkit-transform: translateX(-50%) translateY(-50%);
-      transform: translateX(-50%) translateY(-50%);
+        height: 1200px;
+        height: 100vh;
+        max-height: 100%;
+        overflow: hidden;
 
-      @supports ( object-fit: cover ) {
-            height: 100%;
-            left: 0;
-            -o-object-fit: cover;
-            object-fit: cover;
-            /* top: 0; */
-            top: 0;
-            -ms-transform: none;
-            -moz-transform: none;
-            -webkit-transform: none;
-            transform: none;
-            width: 100%;
+        height: calc(100vh - 32px);
       }
 
+      &:before {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+75 */
+        background: -moz-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#4d000000", GradientType=0); /* IE6-9 */
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        z-index: 2;
+
+        @media screen and (min-width: 768px) {
+          height: 33%;
+        }
+      }
+
+      img {
+        position: fixed;
+        height: auto;
+        left: 50%;
+        max-width: 1000%;
+        min-height: 100%;
+        min-height: 100vh;
+        min-width: 100%;
+        min-width: 100vw; /* vw prevents 1px gap on left that 100% has */
+        width: auto;
+        top: 50%;
+        padding-bottom: 1px; /* Prevent header from extending beyond the footer */
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+
+        @supports ( object-fit: cover ) {
+              height: 100%;
+              left: 0;
+              -o-object-fit: cover;
+              object-fit: cover;
+              /* top: 0; */
+              top: 0;
+              -ms-transform: none;
+              -moz-transform: none;
+              -webkit-transform: none;
+              transform: none;
+              width: 100%;
+        }
+
+      }
     }
   }
+
 
   .site-branding {
     display: table-cell;
@@ -261,7 +265,7 @@ body:not(.home) #header-widget-1 .custom-header-media {
     display: block;
     position: absolute;
     height: auto !important;
-    top: 44px;
+    top: $navigation-height;
     left: 3%;
     width: 100%;
 
@@ -271,7 +275,7 @@ body:not(.home) #header-widget-1 .custom-header-media {
     }
 
     @media screen and (min-width: 768px) {
-      top: 54px;
+      top: $navigation-height + 10;
       left: 3%;
     }
 
@@ -289,8 +293,8 @@ body:not(.home) #header-widget-1 .custom-header-media {
         background-image: url("#{$img-path}header-logo.png");
         background-size: contain;
         background-repeat: no-repeat;
-        width: 180px;
-        height: 167px;
+        width: 200px;
+        height: 186px;
         text-indent: -9999px;
         max-width: 100%;
         position: relative;
@@ -307,13 +311,13 @@ body:not(.home) #header-widget-1 .custom-header-media {
         }
 
         @media screen and (min-width: 992px) {
-          width: 430px;
-          height: 399px;
+          width: 400px;
+          height: 371px;
         }
 
         @media screen and (min-width: 1200px) {
-          width: 450px;
-          height: 418px;
+          width: 400px;
+          height: 371px;
         }
 
       }
@@ -376,7 +380,7 @@ body:not(.home) #header-widget-1 .custom-header-media {
       }
 
       @media screen and (min-width: 1200px) {
-        width: 540px;
+        width: 500px;
       }
 
     }
@@ -396,22 +400,14 @@ body:not(.home) #header-widget-1 .custom-header-media {
   100% { transform: translateY(0) }
 }
 
-/* For browsers that support 'object-fit' */
-/*
-@supports ( object-fit: cover ) {
-  #header-widget-1 {
-    .custom-header-media img {
-      height: 100%;
-      left: 0;
-      -o-object-fit: cover;
-      object-fit: cover;
-      top: 0;
-      -ms-transform: none;
-      -moz-transform: none;
-      -webkit-transform: none;
-      transform: none;
-      width: 100%;
+@media screen and (min-width: 768px) {
+  body:not(.home) {
+    #header-widget-1 {
+      .custom-header {
+        .custom-header-media {
+          max-height: calc(80vh - 32px);
+        }
+      }
     }
   }
 }
-*/
