@@ -261,15 +261,15 @@
     }
     a{
       display: block;
-      height: $navigation-height;
-      line-height: $navigation-height;
+      height: $navigation-height - 16;
+      line-height: $navigation-height - 16;
       padding: 0 $content-gap;
       font-weight: bold;
       font-size: 14px;
     }
     li li a{
-      height: $navigation-height - 4;
-      line-height: $navigation-height - 4;
+      height: $navigation-height - 16;
+      line-height: $navigation-height - 16;
       padding: 0 $content-gap * 1.5;
       font-weight: normal;
       font-size: $navigation-font-size;
