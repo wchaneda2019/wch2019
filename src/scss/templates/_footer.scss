@@ -12,8 +12,7 @@
     background-image: url("#{$img-path}footer-ca-wapuu.png");
     background-size: 84px;
     background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: 8px;
+    background-position: right 8px;
 
     @media screen and (min-width: 544px) {
       background-size: 218px;
