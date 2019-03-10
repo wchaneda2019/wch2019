@@ -53,7 +53,7 @@
     h3{
       line-height: 1.4;
       font-size: 18px;
-      color: #555;
+      color: $color-black80;
       padding: 5px 10px 20px 0px;
       position: relative;
         &:after {
@@ -182,13 +182,13 @@
 
     // inline elements
     a:not(.more-link){
-      color: #1A7EF0;
+      color: $color-blue;
       text-decoration: none;
       &:hover{
-        border-bottom: 1px solid #1A7EF0;
+        border-bottom: 1px solid $color-blue;
       }
       &:visited, &:active{
-        color: #1A7EF0;
+        color: $color-blue;
       }
     }
 
