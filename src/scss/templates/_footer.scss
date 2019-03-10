@@ -63,3 +63,11 @@
 
 
 }
+
+body.page-slug-tickets {
+  .site-footer {
+    #footer-widget-1 {
+      display: none;
+    }
+  }
+}
