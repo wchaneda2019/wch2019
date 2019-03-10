@@ -3,6 +3,44 @@
   margin: 40px 0;
 }
 
+.entry-header {
+  .posted-on {
+    font-size: 0;
+
+    a {
+      font-size: 12px;
+    }
+
+    &:before {
+      font-size: 12px;
+      line-height: 1;
+      content: "\f073";
+      font-family: "FontAwesome";
+      color: #777;
+      padding: 0 8px 0 0;
+    }
+  }
+
+  .byline {
+    font-size: 0;
+
+    .author {
+      font-size: 12px;
+    }
+
+    &:before {
+      font-size: 12px;
+      line-height: 1;
+      content: "\f007";
+      font-family: "FontAwesome";
+      color: #777;
+      padding: 0 8px 0 0;
+    }
+
+  }
+
+}
+
   /* -------------------------------------------------------------- */
   /* editor-style
   /* -------------------------------------------------------------- */
@@ -219,4 +257,5 @@
       margin-right: auto;
       margin-left: auto;
     }
+
   }
