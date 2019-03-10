@@ -6,9 +6,29 @@
 
   // Registration button
   #footer-widget-1 {
-    max-width: 650px;
-    margin: 32px auto;
-    padding: 0 16px;
+    padding: 32px 16px;
+    width: 100%;
+    position: relative;
+    background-image: url("#{$img-path}footer-ca-wapuu.png");
+    background-size: 84px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 8px;
+
+    @media screen and (min-width: 544px) {
+      background-size: 218px;
+    }
+
+    @media screen and (min-width: 768px) {
+      background-size: 218px;
+    }
+
+    @media screen and (min-width: 992px) {
+      background-size: 218px;    }
+
+    @media screen and (min-width: 1200px) {
+      background-size: 218px;
+    }
   }
 
   .site-info{
