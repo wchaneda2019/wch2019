@@ -51,7 +51,7 @@ article.hentry, article.error404 {
 
     a {
       text-decoration: none;
-      color: #000;
+      color: $color-black;
 
       &:hover, &:active, &:focus {
         text-decoration: underline;
@@ -110,7 +110,7 @@ article.hentry, article.error404 {
 footer.entry-meta{
   font-size: 14px;
   a {
-    color: #fc4381;
+    color: $color-blue;
   }
 }
 
@@ -129,10 +129,9 @@ footer.entry-meta{
     }
   }
   &-title{
-    color: $color-yellow;
+    color: $color-black;
     font-weight: bold;
     font-size: 24px;
-    text-shadow: 1px 1px 0 #555555;
     line-height: 1;
     @extend .content-box;
     margin: auto;
