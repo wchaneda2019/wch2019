@@ -4,6 +4,17 @@
 }
 
 .entry-header {
+
+  h1{
+    font-size: 24px;
+    line-height: 1.4;
+    color: $color-black;
+
+    @include mq-only-small(){
+      font-size: 20px;
+    }
+  }
+
   .posted-on {
     font-size: 0;
 
@@ -59,6 +70,10 @@
       margin-top: 0 !important;
     }
 
+    @include mq-only-small(){
+      font-size: 14px;
+    }
+
     // headers
     h1, h2, h3, h4, h5, h6 {
       margin: 30px 0;
@@ -70,6 +85,10 @@
       font-size: 24px;
       line-height: 1.4;
       color: $color-black;
+
+      @include mq-only-small(){
+        font-size: 20px;
+      }
     }
 
     h2{
@@ -78,7 +97,12 @@
       line-height: 1.4;
       color: $color-black;
       position: relative;
-        &:after {
+
+      @include mq-only-small(){
+        font-size: 16px;
+      }
+
+      &:after {
         content: '';
         width: 60px;
         position: absolute;
@@ -94,7 +118,12 @@
       color: $color-black80;
       padding: 5px 10px 20px 0px;
       position: relative;
-        &:after {
+
+      @include mq-only-small(){
+        font-size: 14px;
+      }
+
+      &:after {
         content: '';
         width: 50px;
         position: absolute;
@@ -107,6 +136,11 @@
     h4{
       font-size: 16px;
       color: $color-black70;
+
+      @include mq-only-small(){
+        font-size: 14px;
+      }
+
     }
 
     h5{

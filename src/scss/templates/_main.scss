@@ -61,13 +61,11 @@ article.hentry, article.error404 {
 
   &-title{
     @extend .content-box;
-    font-size: 24px;
+    /* font-size: 24px; */
     font-weight: bold;
     line-height: 1.333;
     margin: 0 auto 30px;
-    @include mq-only-small(){
-      font-size: 18px;
-    }
+
   }
 
   &-content {
