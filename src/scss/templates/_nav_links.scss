@@ -1,30 +1,56 @@
 .nav {
   &-links {
-    max-width: 540px;
+    max-width: $content-width;
     padding: 0 16px;
     margin: 0 auto 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+
     a {
       color: $color-blue;
       text-decoration: none;
       line-height: 1.5;
       font-weight: bold;
+      font-size: 16px;
     }
   }
   &-previous,
   &-next {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    flex-basis: 100%;
+    @media screen and (min-width: 992px) {
+      flex-basis: 50%;
+    }
+    box-sizing: border-box;
   }
   &-previous + &-next {
     border-top: 4px solid $color-gray;
     padding-top: 26px;
+
+    @media screen and (min-width: 992px) {
+      border-top: 0;
+      padding-top: 0;
+      border-left: 4px solid $color-gray;
+      padding-left: 16px;
+      }
   }
+
   &-previous {
     padding-bottom: 24px;
+
+    @media screen and (min-width: 992px) {
+      padding-bottom: 0;
+    }
+
     &::before {
-      color: $color-blue;
-      content: "\f060";
+      //color: $color-blue;
+      color: #777777;
+      content: "\f0a8";
       font-family: FontAwesome;
       display: inline-block;
       margin-right: 16px;
@@ -32,11 +58,11 @@
     }
   }
   &-next {
-    text-align: right;
     justify-content: flex-end;
     &::after {
-      color: $color-blue;
-      content: "\f061";
+      //color: $color-blue;
+      color: #777777;
+      content: "\f0a9";
       font-family: FontAwesome;
       display: inline-block;
       margin-left: 16px;
