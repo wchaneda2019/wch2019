@@ -1,0 +1,98 @@
+#content-widget-1{
+  max-width: $content-width;
+  margin: 32px auto;
+  color: $color-black;
+  padding: 0 16px;
+}
+
+// Top message
+#content-widget-2{
+  max-width: $content-width;
+  margin: 32px auto;
+  color: $color-black;
+  padding: 0 16px;
+
+  .widget_text{
+    text-align: left;
+    border: 1px solid #6d6d6d;
+    padding: 16px;
+
+    .widget-title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 0 0 8px 0;
+
+      @include mq(md){
+        font-size: 20px;
+      }
+    }
+    .textwidget {
+      line-height: 1.4;
+      font-size: 14px;
+
+      @include mq(md){
+        font-size: 16px;
+      }
+    }
+
+  }
+}
+
+//  Recent post
+#content-widget-3{
+  max-width: $content-width;
+  margin: 32px auto;
+  color: $color-black;
+  padding: 0 16px;
+
+  .widget_recent_entries{
+    text-align: left;
+    border: 1px solid #6d6d6d;
+    padding: 16px;
+
+    .widget-title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 0 0 8px 0;
+
+      @include mq(md){
+        font-size: 20px;
+      }
+    }
+
+    ul {
+      max-width: $content-width;
+      margin: 0 auto;;
+      font-size: 14px;
+
+      @include mq(md){
+        font-size: 16px;
+      }
+    }
+
+    li {
+      display: flex;
+      flex-direction: row-reverse;
+      line-height: 1.4;
+
+      a {
+        flex: 300 1 auto;
+      }
+
+      .post-date {
+        flex: 1 0 124px;
+      }
+    }
+  }
+
+  .widget_text {
+    margin: 8px 0 0 0;
+    font-size: 12px;
+    padding: 0 16px;
+    @include mq(md){
+      font-size: 14px;
+    }
+  }
+}

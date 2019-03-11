@@ -16,6 +16,10 @@
       line-height: 1.5;
       font-weight: bold;
       font-size: 16px;
+
+      &:hover, &:active {
+        text-decoration: underline;
+      }
     }
   }
   &-previous,
@@ -23,7 +27,7 @@
     display: flex;
     align-items: center;
     flex-basis: 100%;
-    @media screen and (min-width: 992px) {
+    @include mq(lg){
       flex-basis: 50%;
     }
     box-sizing: border-box;
@@ -32,7 +36,7 @@
     border-top: 4px solid $color-gray;
     padding-top: 26px;
 
-    @media screen and (min-width: 992px) {
+    @include mq(lg){
       border-top: 0;
       padding-top: 0;
       //border-left: 4px solid $color-gray;
@@ -43,7 +47,7 @@
   &-previous {
     padding-bottom: 24px;
 
-    @media screen and (min-width: 992px) {
+    @include mq(lg){
       padding-bottom: 0;
       padding-right: 8px;
     }

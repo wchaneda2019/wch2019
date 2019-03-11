@@ -14,18 +14,7 @@
     background-repeat: no-repeat;
     background-position: 99% 6px;
 
-    @media screen and (min-width: 544px) {
-      background-size: 218px;
-    }
-
-    @media screen and (min-width: 768px) {
-      background-size: 218px;
-    }
-
-    @media screen and (min-width: 992px) {
-      background-size: 218px;    }
-
-    @media screen and (min-width: 1200px) {
+    @include mq(sm){
       background-size: 218px;
     }
   }

@@ -6,12 +6,12 @@
 .entry-header {
 
   h1{
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.4;
     color: $color-black;
 
-    @include mq-only-small(){
-      font-size: 20px;
+    @include mq(md){
+      font-size: 24px;
     }
   }
 
@@ -57,7 +57,7 @@
   /* -------------------------------------------------------------- */
   .entry-content,.page-content {
     @include clearfix;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.7;
     overflow: hidden;
     body[class*="-en"] &,
@@ -70,8 +70,8 @@
       margin-top: 0 !important;
     }
 
-    @include mq-only-small(){
-      font-size: 14px;
+    @include mq(md){
+      font-size: 16px;
     }
 
     // headers
@@ -82,24 +82,24 @@
     }
 
     h1{
-      font-size: 24px;
+      font-size: 20px;
       line-height: 1.4;
       color: $color-black;
 
-      @include mq-only-small(){
-        font-size: 20px;
+      @include mq(md){
+        font-size: 24px;
       }
     }
 
     h2{
-      font-size: 20px;
+      font-size: 16px;
       padding: 5px 0 20px;
       line-height: 1.4;
       color: $color-black;
       position: relative;
 
-      @include mq-only-small(){
-        font-size: 16px;
+      @include mq(md){
+        font-size: 20px;
       }
 
       &:after {
@@ -114,13 +114,13 @@
 
     h3{
       line-height: 1.4;
-      font-size: 18px;
+      font-size: 14px;
       color: $color-black80;
       padding: 5px 10px 20px 0px;
       position: relative;
 
-      @include mq-only-small(){
-        font-size: 14px;
+      @include mq(md){
+        font-size: 18px;
       }
 
       &:after {
@@ -134,11 +134,11 @@
     }
 
     h4{
-      font-size: 16px;
+      font-size: 14px;
       color: $color-black70;
 
-      @include mq-only-small(){
-        font-size: 14px;
+      @include mq(md){
+        font-size: 16px;
       }
 
     }

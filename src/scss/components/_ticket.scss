@@ -7,6 +7,10 @@
 
   .tix-ticket-excerpt {
     color: $color-black70;
-    font-size: 14px;
+    font-size: 12px;
+
+    @include mq(md) {
+      font-size: 14px;
+    }
   }
 }

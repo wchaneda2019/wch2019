@@ -7,7 +7,7 @@
 
 .site-content {
   position: relative;
-  z-index: auto;
+  z-index: 100;
   background: #fff;
 }
 
@@ -25,12 +25,14 @@ article.hentry, article.error404 {
    }
 }
 .entry{
+
   &-header{
     background: $color-gray;
-    padding-top: 26px;
-    padding-bottom: 32px;
+    padding-top: 24px;
+    padding-bottom: 26px;
     position: relative;
     /* z-index: 1; */
+
     &::after {
       position: absolute;
       bottom: -10px;
@@ -44,9 +46,10 @@ article.hentry, article.error404 {
       border-width: 16px 14px 0 14px;
       border-color: $color-blue transparent transparent transparent;
     }
-    @include mq-only-small(){
-      padding-top: 24px;
-      padding-bottom: 26px;
+
+    @include mq(md){
+      padding-top: 26px;
+      padding-bottom: 32px;
     }
 
     a {
@@ -61,28 +64,32 @@ article.hentry, article.error404 {
 
   &-title{
     @extend .content-box;
-    font-size: 24px;
+
+    font-size: 20px;
     font-weight: bold;
     line-height: 1.333;
     margin: 0 auto 30px;
 
-    @include mq-only-small(){
-      font-size: 20px;
+    @include mq(md){
+      font-size: 24px;
     }
   }
 
   &-content {
     @extend .content-box;
+
     padding-top: 32px;
     margin: 0 auto;
     // Avoid more tag link bug
     overflow: visible;
     margin-bottom: 48px;
+
     .more-link {
       @extend .button-primary;
       margin-top: 20px;
     }
   }
+
   &-meta,
   &-footer
   {
@@ -90,15 +97,18 @@ article.hentry, article.error404 {
     margin: 0 auto;
     font-size: 12px;
     color: #777777;
+
     span {
       font-weight: bold;
       &:not(:last-of-type) {
         margin-right: 12px;
       }
     }
+
     time {
       font-weight: bold;
     }
+
     a {
       color: $color-blue;
       text-decoration: none;
@@ -121,6 +131,7 @@ footer.entry-meta{
 }
 
 .page{
+
   &-header {
     padding: 32px 0 34px;
     text-align: center;
@@ -128,18 +139,22 @@ footer.entry-meta{
       @extend .entry-header;
     }
   }
+
   &-title{
     color: $color-black;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1;
     @extend .content-box;
     margin: auto;
-    @include mq-only-small() {
-      text-align: left;
-      font-size: 20px;
+    text-align: left;
+
+    @include mq(md){
+      font-size: 24px;
+      text-align: center;
     }
   }
+
   &-content{
     @extend .entry-content;
   }
