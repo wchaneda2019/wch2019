@@ -179,7 +179,6 @@ body:not(.home) #header-widget-1 .custom-header-media {
 
   }
 
-
   .site-wapuu {
     display: block;
     position: absolute;
@@ -204,27 +203,55 @@ body:not(.home) #header-widget-1 .custom-header-media {
       -webkit-transition: 0.2s ease-in-out;
       transition: 0.2s ease-in-out;
 
+      animation: img-site-wapuu 3s infinite linear;
+      transform-origin: 50% 50%;
+
       &:hover, &:active{
         transform: scale(1.05);
       }
 
-      @include mq(sm) {
-        width: 370px;
+      .wapuu-plane {
+        @include mq(sm) {
+          width: 370px;
+        }
+
+        @include mq(md) {
+          width: 470px;
+        }
+
+        @include mq(lg) {
+          width: 500px;
+        }
       }
 
-      @include mq(md) {
-        width: 470px;
+      .wapuu-pilot {
+        @include mq(sm) {
+          width: 370px;
+        }
+
+        @include mq(md) {
+          width: 470px;
+        }
+
+        @include mq(lg) {
+          width: 500px;
+        }
       }
 
-      @include mq(lg) {
-        width: 500px;
+      .wapuu-ca {
+        @include mq(sm) {
+          width: 370px;
+        }
+
+        @include mq(md) {
+          width: 470px;
+        }
+
+        @include mq(lg) {
+          width: 500px;
+        }
       }
 
-    }
-
-    .wapuu {
-      animation: img-site-wapuu 3s infinite linear;
-      transform-origin: 50% 50%;
     }
 
   }
@@ -237,7 +264,7 @@ body:not(.home) #header-widget-1 .custom-header-media {
   100% { transform: translateY(0) }
 }
 
-@media screen and (min-width: 768px) {
+@include mq(md) {
   body:not(.home) {
     #header-widget-1 {
       .custom-header {
@@ -245,6 +272,28 @@ body:not(.home) #header-widget-1 .custom-header-media {
           max-height: calc(80vh - 32px);
         }
       }
+    }
+  }
+}
+
+body.page-slug-attendees-day1 {
+  .site-wapuu {
+    .wapuu-plane, .wapuu-ca {
+      display: none;
+    }
+    .wapuu-pilot {
+      display: block;
+    }
+  }
+}
+
+body.page-slug-attendees-day2 {
+  .site-wapuu {
+    .wapuu-plane, .wapuu-pilot {
+      display: none;
+    }
+    .wapuu-ca {
+      display: block;
     }
   }
 }
