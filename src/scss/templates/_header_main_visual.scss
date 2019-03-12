@@ -198,19 +198,21 @@ body:not(.home) #header-widget-1 .custom-header-media {
       display: block;
       position: relative;
       z-index: 101;
-      width: 270px;
+
       height: auto;
       -webkit-transition: 0.2s ease-in-out;
       transition: 0.2s ease-in-out;
-
-      animation: img-site-wapuu 3s infinite linear;
-      transform-origin: 50% 50%;
 
       &:hover, &:active{
         transform: scale(1.05);
       }
 
       .wapuu-plane {
+        display: block;
+        width: 270px;
+        animation: img-site-wapuu 3s infinite linear;
+        transform-origin: 50% 50%;
+
         @include mq(sm) {
           width: 370px;
         }
@@ -225,30 +227,40 @@ body:not(.home) #header-widget-1 .custom-header-media {
       }
 
       .wapuu-pilot {
+        display: none;
+        width: 195px;
+        animation: img-site-wapuu 3s infinite linear;
+        transform-origin: 50% 50%;
+
         @include mq(sm) {
-          width: 370px;
+          width: 268px;
         }
 
         @include mq(md) {
-          width: 470px;
+          width: 340px;
         }
 
         @include mq(lg) {
-          width: 500px;
+          width: 362px;
         }
       }
 
       .wapuu-ca {
+        display: none;
+        width: 194px;
+        animation: img-site-wapuu 3s infinite linear;
+        transform-origin: 50% 50%;
+
         @include mq(sm) {
-          width: 370px;
+          width: 266px;
         }
 
         @include mq(md) {
-          width: 470px;
+          width: 337px;
         }
 
         @include mq(lg) {
-          width: 500px;
+          width: 359px;
         }
       }
 
@@ -279,10 +291,10 @@ body:not(.home) #header-widget-1 .custom-header-media {
 body.page-slug-attendees-day1 {
   .site-wapuu {
     .wapuu-plane, .wapuu-ca {
-      display: none;
+      display: none !important;
     }
     .wapuu-pilot {
-      display: block;
+      display: block !important;
     }
   }
 }
@@ -290,10 +302,10 @@ body.page-slug-attendees-day1 {
 body.page-slug-attendees-day2 {
   .site-wapuu {
     .wapuu-plane, .wapuu-pilot {
-      display: none;
+      display: none !important;
     }
     .wapuu-ca {
-      display: block;
+      display: block !important;
     }
   }
 }
