@@ -79,6 +79,11 @@
 
       a {
         flex: 300 1 auto;
+        color: $color-blue;
+        text-decoration: none;
+        &:hover, &:active {
+          text-decoration: underline;
+        }
       }
 
       .post-date {
@@ -93,6 +98,14 @@
     padding: 0 16px;
     @include mq(md){
       font-size: 14px;
+    }
+
+    a {
+      color: $color-blue;
+      text-decoration: none;
+      &:hover, &:active {
+        text-decoration: underline;
+      }
     }
   }
 }
