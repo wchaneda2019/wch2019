@@ -1,20 +1,17 @@
+.wp-embedded-content {
+  //width: 100%;
+}
 
-.wp-block-embed {
-  .wp-embedded-content {
-    width: 100%;
+.wp-embed {
+  font-size: 12px;
+  @include mq(md) {
+    font-size: 14px;
+  }
+}
 
-    .wp-embed {
-      font-size: 12px;
-      @include mq(md) {
-        font-size: 14px;
-      }
-
-      p.wp-embed-heading {
-        font-size: 16px;
-        @include mq(md) {
-          font-size: 20px;
-        }
-      }
-    }
+p.wp-embed-heading {
+  font-size: 16px;
+  @include mq(md) {
+    font-size: 20px;
   }
 }
