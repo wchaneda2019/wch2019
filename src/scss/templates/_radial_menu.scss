@@ -5,9 +5,11 @@
   z-index: 100;
   display: none;
 
+  /*
   @include mq(xl) {
     display: block;
   }
+  */
 
   .wrap{
     position:relative;
