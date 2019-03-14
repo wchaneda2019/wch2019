@@ -5,7 +5,7 @@
   z-index: 100;
   display: none;
 
-  @include mq(lg) {
+  @include mq(xl) {
     display: block;
   }
 
