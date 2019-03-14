@@ -2,8 +2,12 @@
   position: fixed;
   bottom: -25vmin;
   right: -25vmin;
-  z-index: 9999;
-  //display: none;
+  z-index: 100;
+  display: none;
+
+  @include mq(lg) {
+    display: block;
+  }
 
   .wrap{
     position:relative;
