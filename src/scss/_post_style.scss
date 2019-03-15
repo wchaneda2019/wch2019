@@ -8,9 +8,9 @@
   h1{
     font-size: 20px;
     line-height: 1.4;
-    //color: $color-black;
+    color: $color-black;
     //color: #425066;
-    color: #485161;
+    //color: #485161;
 
     @include mq(md){
       font-size: 24px;
