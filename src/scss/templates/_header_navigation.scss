@@ -46,7 +46,7 @@
 .menu-toggle{
   position: relative;
   display: block;
-  @include mq(lg){
+  @include mq(lgm){
     display: none;
   }
   height: $navigation-height;
@@ -111,7 +111,7 @@
 //
 // Global navigation for wide screen.
 //
-@include mq(lg){
+@include mq(lgm){
   .menu-all-pages-container{
     position: relative;
     width: auto;
@@ -243,7 +243,7 @@
   }
 }
 
-@include mq(lg, max, true){
+@include mq(lgm, max, true){
   .menu-all-pages-container{
     display: none;
     .toggled-on &{
