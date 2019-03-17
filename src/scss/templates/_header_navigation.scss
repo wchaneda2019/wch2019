@@ -203,7 +203,8 @@
     .sub-menu{
       display: none;
       position: absolute;
-      top: $navigation-height + 1;
+      top: $navigation-height;
+      border-top: 1px solid #e6e6e6;
       left: 0;
       z-index: 2;
       li{
