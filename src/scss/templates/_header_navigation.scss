@@ -140,6 +140,16 @@
         }
       }
 
+      & > .menu-item-has-children {
+        & > a {
+          padding: 0 20px !important;
+
+          &:hover + .dropdown-toggle:after {
+            color: $color-white !important;
+          }
+        }
+      }
+
       & > li{
         float: left;
         display: inline-block;
@@ -175,7 +185,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 4px;
+        right: 8px;
         padding: 0;
         margin: 0;
         background: transparent;
@@ -198,7 +208,8 @@
       z-index: 2;
       li{
         display: block;
-        border-bottom: 1px solid $color-white;
+        //border-bottom: 1px solid $color-white;
+        border-bottom: 1px solid #e6e6e6;
         width: 300px;
         &:last-child{
           border-bottom: none;
