@@ -1,5 +1,23 @@
 .site-header > .custom-header {
-  display: none;
+  //display: none;
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+
+  .site-title {
+    a {
+      font-size: 0;
+      height: 52px;
+      width: 164.5px;
+      line-height: 52px;
+      background-image: url('#{$img-path}menu-logo.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 10000;
+      display: block;
+    }
+  }
+
 }
 
 /*

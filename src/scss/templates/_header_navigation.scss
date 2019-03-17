@@ -28,6 +28,12 @@
   position: fixed;
   top: 0;
 
+  display: flex;
+  justify-content: flex-end;
+  right: 0;
+  width: 100%;
+  flex-wrap: nowrap;
+
   //box-shadow: 0 3px 3px rgba(0,0,0,.26);
   border-bottom: 1px solid #e6e6e6;
   box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
@@ -238,7 +244,7 @@
       top: $header-height;
     }
     z-index: 99;
-    left: 8px;
+    right: 8px;
     width: 300px;
     width: 90vw;
     background: $color-black;
@@ -250,7 +256,7 @@
       height: 0;
       width: 0;
       position: absolute;
-      left: $navigation-height / 2 - $navigation-ticker-width / 2 - 4 ;
+      right: $navigation-height / 2 - $navigation-ticker-width / 2 - 8 ;
       top: $navigation-ticker-width * -2;
       border: $navigation-ticker-width solid transparent;
       border-right-width: 5px;
