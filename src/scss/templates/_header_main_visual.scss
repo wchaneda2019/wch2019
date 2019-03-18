@@ -328,3 +328,11 @@ body.page-slug-attendees-day2 {
     }
   }
 }
+
+body.page-slug-tickets {
+  #header-widget-1 {
+    .custom-header {
+      display: none;
+    }
+  }
+}
