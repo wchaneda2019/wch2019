@@ -2,13 +2,13 @@
 /* Dependencies
 /*----------------------------------------------------------------------------*/
 
-var gulp           = require('gulp'),
-    $              = require('gulp-load-plugins')({ pattern: ['gulp-*', 'gulp.*'], replaceString: /\bgulp[\-.]/}),
-    argv           = require('yargs').argv,
-    browserSync    = require('browser-sync'),
-    runSequence    = require('run-sequence'),
-    packageImporter = require('node-sass-package-importer')
-;
+const gulp = require('gulp');
+const $ = require('gulp-load-plugins')({ pattern: ['gulp-*', 'gulp.*'], replaceString: /\bgulp[\-.]/});
+const argv = require('yargs').argv;
+const browserSync    = require('browser-sync');
+const packageImporter = require('node-sass-package-importer');
+const pngquant = require('imagemin-pngquant');
+const mozjpeg = require('imagemin-mozjpeg');
 
 /*----------------------------------------------------------------------------*/
 /* File Destinations
@@ -48,7 +48,7 @@ var nodeSassConf = {
     require("bourbon-neat").includePaths,
     './node_modules/font-awesome/scss'
   ),
-  outputStyle   : 'compressed',
+  outputStyle   : 'expanded',
 	importer: packageImporter({
 		extensions: ['.scss', '.css']
 	})
@@ -84,8 +84,14 @@ gulp.task('bs-reload', function(callback) {
 gulp.task('image-min', function() {
   var paths = filePaths();
   return gulp.src( paths.imagePath + '**/*')
-    .pipe($.imagemin({ optimizationLevel: 3 }))
-	.pipe(gulp.dest(paths.imageDest));
+    .pipe($.imagemin({
+			optimizationLevel: 3,
+			plugins: [
+				pngquant({quality: [.7, .85]}),
+				mozjpeg({quality: 85}),
+			]
+		}))
+		.pipe(gulp.dest(paths.imageDest));
 });
 
 
@@ -140,11 +146,16 @@ gulp.task('sass', function () {
       $env: deployFlg ? 'production' : 'development'
     }))
     .pipe($.cssGlobbing({ extensions: ['.scss'] }))
-    .pipe($.sass(nodeSassConf).on('error', $.sass.logError))
+		.pipe($.sass(nodeSassConf).on('error', $.sass.logError))
+		.pipe($.sourcemaps.write({includeContent: false}))
+		.pipe($.sourcemaps.init({loadMaps: true}))
     .pipe($.autoprefixer({
-      browsers: ['last 2 versions', 'ie 10', 'ie 9'],
+      browsers: ['last 2 versions', 'ie 10'],
       cascade: false
-    }))
+		}))
+		//.pipe($.groupCssMediaQueries())
+		.pipe($.cssnano({autoprefixer: false}))
+		.pipe($.cssnano())
     .pipe($.sourcemaps.write('maps', {
       includeContent: false,
       sourceRoot: paths.scssPath
