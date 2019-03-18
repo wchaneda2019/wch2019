@@ -15,7 +15,7 @@
   }
 
   input[type="submit"] {
-    width: 120px;
+    width: 118px;
     height: 48px;
     text-align: center;
     -webkit-box-sizing: content-box;
@@ -25,28 +25,23 @@
     box-shadow: 0 3px 0 #d27d00;
     color: #fff !important;
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
-    padding: 0 2em;
-    border-radius: 24px;
+    padding: 0 2em !important;
+    border-radius: 24px !important;
     transition: 0.2s ease-in-out;
     text-decoration: none;
     margin: 0 auto;
     border: 0;
 
     @include mq(sm){
-      font-size: 16px;
-      width: 138px;
+      font-size: 15px;
+      width: 120px;
     }
 
     @include mq(md){
-      font-size: 18px;
-      width: 144px;
-    }
-
-    @include mq(lg){
-      font-size: 19px;
-      width: 152px;
+      font-size: 16px;
+      width: 138px;
     }
 
     a:link, a:visited {
@@ -63,24 +58,7 @@
 
   .tix-submit {
     .tix-checkout-button {
-      width: 120px;
-      height: 48px;
-      text-align: center;
-      -webkit-box-sizing: content-box;
-      box-sizing: content-box;
-      line-height: 48px;
-      background-color: #fd9535;
-      box-shadow: 0 3px 0 #d27d00;
-      color: #fff !important;
-      text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
-      font-size: 15px;
-      font-weight: bold;
-      padding: 0 2em;
-      border-radius: 24px;
-      transition: 0.2s ease-in-out;
-      text-decoration: none;
-      margin: 0 auto;
-      border: 0;
+
     }
   }
 }
