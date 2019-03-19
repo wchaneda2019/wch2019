@@ -1,24 +1,37 @@
-.site-header > .custom-header {
-  //display: none;
-  z-index: 10000;
-  position: fixed;
-  top: 0;
+.site-header {
+  & > .custom-header {
+    //display: none;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
 
-  .site-title {
-    a {
-      display: block;
-      font-size: 0;
-      height: 52px;
-      width: 164.5px;
-      line-height: 52px;
-      background-image: url('#{$img-path}menu-logo.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      z-index: 10000;
-      margin: 0 8px;
+    & > .site-branding {
+      a {
+        text-decoration: none;
+        -webkit-transition: opacity 0.2s;
+        transition: opacity 0.2s;
+
+        &:hover, &:focus {
+          opacity: 0.7;
+        }
+      }
+
+      & > .site-title {
+        a {
+          display: block;
+          font-size: 0;
+          height: 52px;
+          width: 164.5px;
+          line-height: 52px;
+          background-image: url('#{$img-path}menu-logo.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+          z-index: 10000;
+          margin: 0 8px;
+        }
+      }
     }
   }
-
 }
 
 /*
@@ -167,29 +180,27 @@ body:not(.home) #header-widget-1 .custom-header-media {
     }
 
     .site-title {
-      > a {
-        display: block;
-        background-image: url("#{$img-path}header-logo.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 200px;
-        height: 186px;
-        text-indent: -9999px;
-        max-width: 100%;
-        position: relative;
-        z-index: 100;
+      display: block;
+      background-image: url("#{$img-path}header-logo.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 186px;
+      text-indent: -9999px;
+      max-width: 100%;
+      position: relative;
+      z-index: 100;
 
-        @include mq(sm) {
-          width: 300px;
-          height: 276px;
-        }
-
-        @include mq(md) {
-          width: 400px;
-          height: 371px;
-        }
-
+      @include mq(sm) {
+        width: 300px;
+        height: 276px;
       }
+
+      @include mq(md) {
+        width: 400px;
+        height: 371px;
+      }
+
     }
 
     .site-description {
