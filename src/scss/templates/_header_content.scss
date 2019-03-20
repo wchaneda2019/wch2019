@@ -7,25 +7,30 @@
 
 // Top message
 #content-widget-2{
-  max-width: $content-width;
-  margin: 32px auto;
   color: $color-black;
-  padding: 0 16px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
 
   .widget_text{
     text-align: left;
-    border: 1px solid #6d6d6d;
-    padding: 16px;
+    padding: 32px 16px;
+    margin: 0 auto;
+    max-width: $content-width;
 
     .widget-title {
       font-weight: 600;
-      font-size: 16px;
+      font-size: 20px;
       line-height: 1.6;
       margin: 0 0 8px 0;
 
       @include mq(md){
         font-size: 20px;
       }
+
+      @include mq(xl){
+        font-size: 24px;
+      }
+
     }
     .textwidget {
       line-height: 1.4;
@@ -34,6 +39,10 @@
       @include mq(md){
         font-size: 16px;
       }
+
+      @include mq(xl) {
+        line-height: 1.5;
+      }
     }
 
   }
@@ -41,24 +50,28 @@
 
 //  Recent post
 #content-widget-3{
-  max-width: $content-width;
-  margin: 32px auto;
   color: $color-black;
-  padding: 0 16px;
+  width: 100%;
 
   .widget_recent_entries{
     text-align: left;
-    border: 1px solid #6d6d6d;
-    padding: 16px;
+    padding: 32px 16px 0 16px;
+    margin: 0 auto;
+    max-width: $content-width;
 
     .widget-title {
       font-weight: 600;
-      font-size: 16px;
+      font-size: 20px;
       line-height: 1.6;
       margin: 0 0 8px 0;
 
       @include mq(md){
         font-size: 20px;
+      }
+
+      @include mq(xl){
+        font-size: 24px;
+        line-height: 1.7;
       }
     }
 
@@ -77,6 +90,10 @@
       flex-direction: row-reverse;
       line-height: 1.4;
 
+      @include mq(xl){
+        line-height: 1.5;
+      }
+
       a {
         flex: 300 1 auto;
         color: $color-blue;
@@ -93,9 +110,11 @@
   }
 
   .widget_text {
-    margin: 8px 0 0 0;
-    font-size: 12px;
-    padding: 0 16px;
+    font-size: 14px;
+    padding: 8px 16px 32px 16px;
+    margin: 0 auto;
+    max-width: $content-width;
+
     @include mq(md){
       font-size: 14px;
     }
