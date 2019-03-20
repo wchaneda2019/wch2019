@@ -17,6 +17,10 @@
     margin: 0 auto;
     max-width: $content-width;
 
+    @include mq(lg){
+      padding: 48px 16px;
+    }
+
     .widget-title {
       font-weight: 600;
       font-size: 20px;
@@ -27,7 +31,7 @@
         font-size: 20px;
       }
 
-      @include mq(xl){
+      @include mq(lg){
         font-size: 24px;
       }
 
@@ -40,8 +44,9 @@
         font-size: 16px;
       }
 
-      @include mq(xl) {
+      @include mq(lg) {
         line-height: 1.5;
+        margin: 16px 0 0 0;
       }
     }
 
@@ -59,6 +64,10 @@
     margin: 0 auto;
     max-width: $content-width;
 
+    @include mq(lg){
+      padding: 48px 16px 0 16px;
+    }
+
     .widget-title {
       font-weight: 600;
       font-size: 20px;
@@ -69,7 +78,7 @@
         font-size: 20px;
       }
 
-      @include mq(xl){
+      @include mq(lg){
         font-size: 24px;
         line-height: 1.7;
       }
@@ -83,6 +92,10 @@
       @include mq(md){
         font-size: 16px;
       }
+
+      @include mq(lg){
+        margin: 16px auto 0 auto;
+      }
     }
 
     li {
@@ -90,7 +103,7 @@
       flex-direction: row-reverse;
       line-height: 1.4;
 
-      @include mq(xl){
+      @include mq(lg){
         line-height: 1.5;
       }
 
@@ -117,6 +130,10 @@
 
     @include mq(md){
       font-size: 14px;
+    }
+
+    @include mq(lg){
+      padding: 8px 16px 48px 16px;
     }
 
     a {
