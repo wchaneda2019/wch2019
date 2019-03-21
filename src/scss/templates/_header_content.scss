@@ -88,7 +88,6 @@
 
       @include mq(lg){
         font-size: 24px;
-        line-height: 1.7;
       }
     }
 
@@ -104,30 +103,31 @@
       @include mq(lg){
         margin: 16px auto 0 auto;
       }
-    }
 
-    li {
-      display: flex;
-      flex-direction: row-reverse;
-      line-height: 1.4;
+      li {
+        display: flex;
+        flex-direction: row-reverse;
+        line-height: 1.4;
 
-      @include mq(lg){
-        line-height: 1.5;
-      }
+        @include mq(lg){
+          line-height: 1.5;
+        }
 
-      a {
-        flex: 300 1 auto;
-        color: $color-blue;
-        text-decoration: none;
-        &:hover, &:active {
-          text-decoration: underline;
+        a {
+          flex: 300 1 auto;
+          color: $color-blue;
+          text-decoration: none;
+          &:hover, &:active {
+            text-decoration: underline;
+          }
+        }
+
+        .post-date {
+          flex: 1 0 124px;
         }
       }
-
-      .post-date {
-        flex: 1 0 124px;
-      }
     }
+
   }
 
   .widget_text {
@@ -137,7 +137,6 @@
     max-width: $content-width;
 
     @include mq(md){
-      font-size: 14px;
       padding: 8px 16px 32px 16px;
     }
 
