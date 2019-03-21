@@ -126,6 +126,8 @@ body.page-slug-tickets{
 
       #menu-item-807{
         display: none;
+        height: $navigation-height;
+        background: #fff;
         @include mq(xl){
           display: block;
         }
