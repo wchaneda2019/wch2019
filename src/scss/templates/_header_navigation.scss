@@ -108,6 +108,12 @@
   }
 }
 
+body.page-slug-tickets{
+  #menu-item-140 {
+    display: none !important;
+  }
+}
+
 //
 // Global navigation for wide screen.
 //
@@ -117,6 +123,44 @@
     width: auto;
     .menu{
       @include clearfix();
+
+      #menu-item-807{
+        display: none;
+        @include mq(xl){
+          display: block;
+        }
+        & > a {
+          width: 64px;
+          height: 40px;
+          text-align: center;
+          -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+          line-height: 40px;
+          background-color: #fd9535 !important;
+          box-shadow: 0 2px 0 #d27d00;
+          color: #fff !important;
+          text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+          font-size: 14px;
+          font-weight: 700;
+          padding: 0 2em;
+          border-radius: 24px;
+          transition: 0.2s ease-in-out;
+          text-decoration: none;
+          margin: 4px 8px 0 8px;
+          z-index: -1;
+
+          a:link, a:visited {
+            color: $color-white;
+            text-decoration: none;
+          }
+          &:hover, &:active{
+            -webkit-transform: translate3d(0px, 2px, 1px);
+            transform: translate3d(0px, 2px, 1px);
+            -webkit-box-shadow: none;
+            box-shadow: none;
+          }
+        }
+      }
 
       & > .current-menu-item {
         & > a {
