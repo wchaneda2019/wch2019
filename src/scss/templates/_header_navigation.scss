@@ -295,8 +295,13 @@ body.page-slug-tickets{
 @include mq(lgm, max, true){
   .menu-all-pages-container{
     display: none;
+
     .toggled-on &{
       display: block;
+
+      #menu-item-807 {
+        display: none;
+      }
     }
     position: absolute;
     top: $header-height + 4;
