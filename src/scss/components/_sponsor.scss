@@ -88,8 +88,10 @@
 
 
 .wcb_widget_sponsors {
-  margin: 0 auto;
   @extend .content-box;
+  margin: 0 auto;
+  padding: 48px 16px;
+
   .widget-title{
     text-align: center;
     font-size: 22px;
