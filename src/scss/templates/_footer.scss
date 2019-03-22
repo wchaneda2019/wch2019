@@ -2,10 +2,15 @@
 .site-footer {
   position: relative;
   background: #fff;
-  border-top: 1px solid #eee;
+
+  /*
+  .footer-widgets-block {
+    border-top: 1px solid #eee;
+  }
+  */
 
   // Registration button
-  #footer-widget-1 {
+  #footer-widget-2 {
     padding: 32px 16px;
     width: 100%;
     position: relative;
@@ -13,10 +18,15 @@
     background-size: 84px;
     background-repeat: no-repeat;
     background-position: 99% 6px;
+    border-top: 1px solid #eee;
 
     @include mq(sm){
       background-size: 218px;
     }
+  }
+
+  #footer-widget-5 {
+    border-top: 1px solid #eee;
   }
 
   .site-info{
