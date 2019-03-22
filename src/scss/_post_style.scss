@@ -202,11 +202,13 @@
     code, kbd{
       display: inline-block;
       font-family: $wct-monospace;
-      background: #f9f9f9;
-      border: 1px solid #ddd;
+      background: #f0f0f0;
+      //border: 1px solid #ddd;
       border-radius: 2px;
-      padding: 2px;
-      margin: 0 2px;
+      font-size: 14px;
+      line-height: 1.5;
+      max-width: 100%;
+      padding: 16px;
     }
 
     ul, dl, ol{
