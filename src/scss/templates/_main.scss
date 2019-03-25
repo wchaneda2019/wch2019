@@ -180,3 +180,39 @@ body.page-slug-tickets {
     margin: $navigation-height 0 0 0;
   }
 }
+
+
+body.page-slug-schedule {
+  .entry{
+
+    &-title{
+      max-width: 960px;
+    }
+
+    &-content {
+      max-width: 960px;
+    }
+
+    &-meta,
+    &-footer
+    {
+      max-width: 960px;
+    }
+  }
+
+  .comments-area {
+    max-width: 960px;
+  }
+
+  .page{
+
+    &-title{
+      max-width: 960px;
+    }
+
+    &-content{
+      max-width: 960px;
+    }
+  }
+
+}
