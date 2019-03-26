@@ -37,6 +37,38 @@
     background-color: #ccc;
   }
 
+  .wcpt-time-1100 .wcpt-session-empty {
+    background: #f1f1f1;
+  }
+
+  .wcpt-time-1105 .wcpt-session-empty {
+    background: #f1f1f1;
+  }
+
+  .wcpt-time-1120 .wcpt-session-empty {
+    background: #f1f1f1;
+  }
+
+  .wcpt-time-1815 td:nth-of-type(2) {
+    background: #f1f1f1;
+  }
+
+  .wcpt-time-1815 td:nth-of-type(3) {
+    background: #f1f1f1;
+  }
+
+  .wcpt-time-1815 td:nth-of-type(4) {
+    background: #f1f1f1;
+  }
+
+  .wcpt-time-1830 td:nth-of-type(1) {
+    background: #f1f1f1;
+  }
+
+  .wcpt-time-1815 td:nth-of-type(2) {
+    background: #f1f1f1;
+  }
+
   .wcpt-session-empty {
     //background-color: #f1f1f1;
     //border-width: 0;
@@ -61,15 +93,18 @@
     color: #777;
   }
 
-  .wcb-track-2f-hall, .wcb-track-4f-a, .wcb-track-4f-b, .wcb-track-bizbeach {
+  .wcb-track-1f-hall, .wcb-track-2f-hall, .wcb-track-4f-a, .wcb-track-4f-b, .wcb-track-bizbeach {
     border-bottom-width: 0 !important;
   }
+
   .global-session.-lunch td {
     @include mq(md) {
       background-color: #fffde3;
     }
   }
+
   .wcpt-time {
     background-color: #ccc;
   }
+
 }
