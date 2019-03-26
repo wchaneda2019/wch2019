@@ -76,6 +76,10 @@
     border-bottom-width: 0;
   }
 
+  td[data-session-id="1226"].wcb-track-1f-hall {
+    border-bottom-width: 1px !important;
+  }
+
   .wcpt-session-speakers {
     display: block;
     margin-top: .25em;
