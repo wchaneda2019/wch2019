@@ -147,7 +147,7 @@
   }
 
   @include mq(mds, max, true){
-    .wcpt-session-type-session, .wcb-session-lunch, .wcb-session-opening-remarks, .wcb-session-closing-remarks {
+    .wcpt-session-type-custom, .wcpt-session-type-session, .wcb-session-lunch, .wcb-session-opening-remarks, .wcb-session-closing-remarks {
       margin-bottom: 0;
       border: none;
     }
