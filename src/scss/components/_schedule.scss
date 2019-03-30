@@ -144,6 +144,9 @@
 
   .wcpt-time {
     background-color: #ccc;
+    @include mq(mds, max, true){
+      border: none;
+    }
   }
 
   @include mq(mds, max, true){
