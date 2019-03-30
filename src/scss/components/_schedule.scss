@@ -22,7 +22,20 @@
     thead {
       th {
         background-color: $color-blue;
-        color: #fff;
+        color: $color-white;
+      }
+    }
+
+    tbody {
+      td {
+        &:before {
+          @include mq(mds, max, true){
+            padding: .5em;
+            border: none;
+            background-color: $color-blue;
+            color: $color-white;
+          }
+        }
       }
     }
   }
@@ -92,6 +105,10 @@
     //border-width: 0;
     border-top-width: 0;
     border-bottom-width: 0;
+
+    @include mq(mds, max, true){
+      display: none;
+    }
   }
 
   td[data-session-id="1226"].wcb-track-1f-hall {
@@ -127,6 +144,13 @@
 
   .wcpt-time {
     background-color: #ccc;
+  }
+
+  @include mq(mds, max, true){
+    .wcpt-session-type-session, .wcb-session-lunch, .wcb-session-opening-remarks, .wcb-session-closing-remarks {
+      margin-bottom: 0;
+      border: none;
+    }
   }
 
 }
