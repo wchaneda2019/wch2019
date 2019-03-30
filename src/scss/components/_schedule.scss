@@ -29,7 +29,7 @@
     tbody {
       td {
         &:before {
-          @include mq(mds, max, true){
+          @include mq(mds, max, false){
             padding: .5em;
             border: none;
             background-color: $color-blue;
@@ -106,7 +106,7 @@
     border-top-width: 0;
     border-bottom-width: 0;
 
-    @include mq(mds, max, true){
+    @include mq(mds, max, false){
       display: none;
     }
   }
@@ -144,12 +144,12 @@
 
   .wcpt-time {
     background-color: #ccc;
-    @include mq(mds, max, true){
+    @include mq(mds, max, false){
       border: none;
     }
   }
 
-  @include mq(mds, max, true){
+  @include mq(mds, max, false){
     .wcpt-session-type-custom, .wcpt-session-type-session, .wcb-session-lunch, .wcb-session-opening-remarks, .wcb-session-closing-remarks {
       margin-bottom: 0;
       border: none;
