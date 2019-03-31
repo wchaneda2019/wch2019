@@ -261,7 +261,8 @@
       color: $color-blue;
       text-decoration: none;
       &:hover{
-        border-bottom: 1px solid $color-blue;
+        //border-bottom: 1px solid $color-blue;
+        text-decoration: underline;
       }
       &:visited, &:active{
         color: $color-blue;
