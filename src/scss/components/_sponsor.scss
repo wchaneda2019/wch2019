@@ -50,12 +50,11 @@
     }
   }
 
-  @each $var in ( gold #ffb74a, silver #c4bfc4, bronze #9E5318, in-kind #69B74B, green #69B74B ) {
+  @each $var in ( gold #ffb74a, silver #c4bfc4, bronze #9E5318, in-kind #404040, green #69B74B ) {
     $name: nth( $var, 1 );
     $color: nth($var, 2);
     &-sponsor-level{
-      &-#{$name},
-      &-tokyo-#{$name}{
+      &-#{$name}{
         h2{
           color: $color;
           border-bottom-color: $color;
@@ -70,16 +69,13 @@
   &-sponsor-level{
 
 
-    &-gold,
-    &-tokyo-gold{
+    &-gold {
     }
 
-    &-silver,
-    &-tokyo-silver{
+    &-silver {
     }
 
-    &-bronze,
-    &-tokyo-bronze{
+    &-bronze {
     }
 
   }
@@ -120,17 +116,14 @@
     &-level {
       width: 100%;
       margin-bottom: 24px;
-      &::after {
-        display: block;
-        content: '';
-        clear: left;
-      }
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: stretch;
+      flex-wrap: wrap;
     }
     &-logo {
-      margin: 0 auto;
-      text-align: center;
-      padding: 0 16px;
-      display: block;
+      padding: 8px 16px;
       img {
         max-width: 100%;
         max-height: 150px;
@@ -140,25 +133,28 @@
     }
   }
 
-  @each $var in ( gold #ffb74a 70%, silver #c4bfc4 50%, bronze #9E5318 33.333%, in-kind #69B74B 25%, green #69B74B 25% ) {
+  @each $var in ( gold #ffb74a 70% space-around, silver #c4bfc4 50% flex-start, bronze #9E5318 33.333% flex-start, in-kind #404040 25% flex-start, green #69B74B 25% flex-start) {
     $name: nth( $var, 1 );
     $color: nth($var, 2);
     $width: nth($var, 3);
+    $justify-content: nth($var, 4);
+
     .sponsor-level{
-      &.#{$name},
-      &.tokyo-#{$name}{
+      &.#{$name}{
+        justify-content: $justify-content;
+
         h4{
           color: $color;
           border-bottom-color: $color;
+          width: 100%;
         }
         h3{
           background: $color;
         }
         .sponsor-logo {
           width: $width;
-          @if $name != gold {
-            float: left;
-          }
+          flex-basis: $width;
+          align-self: auto;
         }
       }
     }
