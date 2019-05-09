@@ -1,0 +1,16 @@
+.session-video::before {
+  content: "発表資料";
+  font-size: 20px;
+  padding: 5px 0 20px;
+  line-height: 1.4;
+  color: #404040;
+  position: relative;
+  font-weight: bold;
+  width: 60px;
+  border-bottom: 4px solid #4a89e8;
+}
+
+.session-video a {
+  display: block;
+  margin: 60px 0 40px 35px;
+}
