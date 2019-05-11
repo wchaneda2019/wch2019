@@ -1,6 +1,6 @@
 .session-video::before {
   content: "発表資料";
-  font-size: 20px;
+  font-size: 16px;
   padding: 5px 0 20px;
   line-height: 1.4;
   color: #404040;
@@ -8,6 +8,10 @@
   font-weight: bold;
   width: 60px;
   border-bottom: 4px solid #4a89e8;
+
+  @include mq(md) {
+    font-size: 20px;
+  }
 }
 
 .session-video a {
